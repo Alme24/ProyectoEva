@@ -83,6 +83,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
+  background-color: #ffffff;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .menu2 {
@@ -318,6 +321,22 @@ p {
   }
 }
 
+.login-register {
+  font-size: 0.9em;
+  color: #162938;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+.login-register p a {
+  color: #162938;
+  text-decoration: none;
+  font-weight: 600;
+}
+.login-register p a:hover {
+  text-decoration: underline;
+}
+
 /* Carrucel */
 
 .principal {
@@ -326,10 +345,12 @@ p {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  /*  flex-direction: column; */
-  /*  align-items: center; */
   padding: 0;
   margin: 0;
+  background-image: url("../imagenes/Frame.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .titulo-carrucel {
@@ -343,18 +364,16 @@ p {
 .carrucel {
   width: 65rem;
   height: 70vh;
-  background: rgb(239, 239, 239);
-  background: linear-gradient(
-    173deg,
-    rgba(239, 239, 239, 0.9472163865546218) 24%,
-    rgba(247, 247, 247, 0.9332107843137255) 71%
-  );
-
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px 5px;
 }
+
 .gallery {
   width: 100%;
 }
