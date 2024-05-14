@@ -19,4 +19,7 @@ use App\Http\Controllers\PostController;
 Route::get('/', HomeController::class);
 
 
-Route::get('/post', [PostController::class, 'index']);
+Route::get('/actividades', [PostController::class, 'index']);
+Route::get('/piano', [PostController::class, 'piano']);
+Route::get('/actividades/practica1', [PostController::class, 'practica1']);
+

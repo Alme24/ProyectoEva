@@ -1,49 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-  <link rel="stylesheet" href="{{ asset('css/home.css') }}" />
-
-
-
-
-    <title>Document</title>
-  </head>
-  <body>
-    <header class="heder1">
-      <div class="menu1">
-        <div class="logo">
-          <img src="{{ asset('imags/logoM.jpeg') }}" alt="" class="imagen" />
-        </div>
-        <div class="titulo"><h1 class="titulo">MUSINGO</h1></div>
-        <div class="btn-title">
-          <button class="bthLogin-popup">Iniciar sesión</button>
-        </div>
-      </div>
-    </header>
-    <header class="header2">
-      <div class="menu2">
-        <nav class="navigation">
-          <a href="#">Inicio</a>
-          <a href="#">Material</a>
-          <a href="lecciones.html">Lecciones</a>
-          <a href="#">Acerca de</a>
-        </nav>
-      </div>
-    </header>
-
-    <div class="titulo-carrucel">
-      <h2>NOTAS MUSICALES</h2>
-    </div>
-    <div class="principal">
+<x-app-plantilla>
+ @section('title', 'NOTAS MUSICALES')
       <div class="carrucel">
         <div class="gallery">
           <div class="gallery-container">
@@ -125,16 +81,6 @@
           </div>
         </div>
       </div>
-    </div>
 
     <script src="{{ asset('js/home.js') }}"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
-</html>
+  </x-app-plantilla>
