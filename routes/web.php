@@ -21,5 +21,6 @@ Route::get('/', HomeController::class);
 
 Route::get('/actividades', [PostController::class, 'index']);
 Route::get('/piano', [PostController::class, 'piano']);
+Route::get('/piano-nivel2', [PostController::class, 'piano_nivel2']);
 Route::get('/actividades/practica1', [PostController::class, 'practica1']);
 

@@ -14,6 +14,11 @@ class PostController extends Controller
       return view('piano');
     }
 
+    public function piano_nivel2(){
+    return view('piano-nivel2');
+    }
+
+
     public function practica1(){
     return view('practica1');
     }

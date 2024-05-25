@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="{{ asset('lib/fontawesome-free-6.4.2-web/css/all.min.css') }}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,6 +16,7 @@
 <link rel="stylesheet" href="{{ asset('css/login.css') }}" />
 <link rel="stylesheet" href="{{ asset('css/lecciones.css') }}" />
 <link rel="stylesheet" href="{{ asset('css/piano.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/piano-nivel2.css') }}" />
 <link rel="stylesheet" href="{{ asset('css/practica.css') }}" />
 <link rel="stylesheet" href="{{ asset('css/practica1.css') }}" />
 
@@ -38,7 +40,8 @@
           <a href='/'>Inicio</a>
           <a href="#">Material</a>
           <a href="actividades">Lecciones</a>
-          <a href="piano">piano</a>
+          <a href="piano">Piano</a>
+          <a href="piano-nivel2">Piano Nivel 2</a>
           <a href="#">Acerca de</a>
         </nav>
       </div>
