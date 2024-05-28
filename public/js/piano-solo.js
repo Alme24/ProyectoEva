@@ -1,5 +1,4 @@
 let keyboard = document.querySelector(".piano_keyboard");
-let controls = document.querySelectorAll(".piano_control_option");
 let pianoNotes = ["C", "D", "E", "F", "G", "A", "B"];
 let keyboardMap = [
     "1",
@@ -39,62 +38,7 @@ let keyboardMap = [
     "N",
     "M",
 ];
-let playBtn = document.querySelector(".piano_play_btn");
-let tempoSelect = document.querySelector(".piano_tempo");
-let songSelect = document.querySelector(".piano_song_list");
 let keys = [];
-
-let SetRain = `A3,1,D3,1,F3,1,D3,1,A3,1,D3,1,F3,1,A3,1,,A3,1,C3,1,F3,1,C3,1,A3,1,A#3,1,A3,1,G3,1,G3,1,C3,1,E3,1,C3,1,G3,1,C3,1,E3,1,A#3,1,,A#3,1,D3,1,E3,1,D3,1,A#3,1,D3,1,G3,1,A3,1,,A3,1,D3,1,F3,1,D3,1,A3,1,D3,1,F3,1,A3,1,,A3,1,C3,1,F3,1,C3,1,A3,1,A#3,1,A3,1,G3,1,,G3,1,C3,1,E3,1,C3,1,G3,1,C3,1,E3,1,A#3,1,,A#3,1,D3,1,G3,1,D3,1,A#3,1,D3,1,G3,1,C3,1,C3,1,C3,1`;
-
-let jingleBells = `E4,E4,E4,,E4,E4,E4,,E4,G4,C4,D4,E4,,,,F4,F4,F4,F4,F4,E4,E4,E4,E4,D4,D4,E4,D4,G4`;
-
-let playSong = (notesString, tempo, cb) => {
-    let notes = notesString.split(",");
-    let currentNote = 0;
-    let mousedown = new Event("mousedown");
-    let mouseup = new Event("mouseup");
-    let btn;
-
-    let interval = setInterval(() => {
-        if (currentNote < notes.length) {
-            if (notes[currentNote].trim() !== "") {
-                if (btn) {
-                    btn.dispatchEvent(mouseup);
-                }
-                btn = document.querySelector(
-                    `[data-letter-note="${notes[currentNote].trim()}"]`
-                );
-                if (btn) {
-                    btn.dispatchEvent(mousedown);
-                }
-            }
-            currentNote++;
-        } else {
-            if (btn) {
-                btn.dispatchEvent(mouseup);
-            }
-            clearInterval(interval);
-            cb();
-        }
-    }, 300 / tempo);
-};
-
-playBtn.addEventListener("mousedown", () => {
-    let tempo = +tempoSelect.value;
-    let songNum = +songSelect.value;
-    playBtn.disabled = true;
-
-    let enablePlayBtn = () => (playBtn.disabled = false);
-
-    switch (songNum) {
-        case 1:
-            playSong(jingleBells, tempo, enablePlayBtn);
-            break;
-        case 2:
-            playSong(SetRain, tempo, enablePlayBtn);
-            break;
-    }
-});
 
 let init = () => {
     for (let i = 1; i <= 5; i++) {
@@ -173,26 +117,5 @@ let playSound = (key) => {
     audio.src = "samples2/" + key.dataset.letterNoteFileName + ".mp3";
     audio.play().then(() => audio.remove());
 };
-
-controls.forEach((input) => {
-    input.addEventListener("input", () => {
-        let value = input.value;
-        let type;
-        switch (value) {
-            case "letterNote":
-                type = "letterNote";
-                break;
-            case "keyboard":
-                type = "keyboard";
-                break;
-            case "none":
-                type = "";
-                break;
-        }
-        keys.forEach((key) => {
-            key.textContent = key.dataset[type];
-        });
-    });
-});
 
 init();

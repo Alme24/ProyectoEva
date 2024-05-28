@@ -1,0 +1,228 @@
+.piano_notas {
+    width: 100%;
+    background: white;
+    margin: 0 20px 20px 20px;
+    padding: 15px 0 10px 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+.piano_sub {
+    position: relative;
+    height: 120px;
+    border-left: 6px solid black;
+    margin: 60px 0 60px 0;
+}
+
+.lines .line {
+    height: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #666;
+}
+
+.cleff {
+    position: absolute;
+    left: 14px;
+    height: 165%;
+    top: -28%;
+    z-index: 1;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.lines .line2 {
+    top: 25%;
+}
+
+.lines .line3 {
+    top: 50%;
+}
+
+.lines .line4 {
+    top: 75%;
+}
+
+.lines .line5 {
+    top: auto;
+    bottom: 0;
+}
+
+.staff_notes {
+    position: absolute;
+    top: 0;
+    left: 120px;
+    right: 0;
+    bottom: 0;
+}
+
+/* .staff_notes .note .primary {
+  height: 100%;
+}
+
+.whole_note {
+  width: 50px;
+  height: 50px;
+} */
+
+.escondido {
+    display: none;
+}
+
+#barraProgreso {
+    height: 10px;
+    width: 100%;
+    background-color: #ed222a;
+    /* background-color: #f2bc1b; */
+    /* margin-bottom: 150px; */
+    position: absolute;
+    top: 0px;
+}
+
+#barraProgreso div {
+    height: 10px;
+    background-color: #2596be;
+}
+
+.completarTiempo {
+    animation-name: completarbarra;
+    animation-duration: var(--tiempo);
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes completarbarra {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.invisible {
+    position: absolute;
+    top: -100000px;
+}
+
+#palabraActual {
+    /* text-align: center; */
+    margin-left: 220px;
+    font-size: 100px;
+}
+
+.letraActual {
+    color: #ed222a;
+}
+
+.desaparecer {
+    font-size: 100px;
+    position: absolute;
+    animation-name: desaparecer;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes desaparecer {
+    0% {
+        width: 0%;
+    }
+    50% {
+        color: rgb(69, 91, 169);
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0%;
+        font-size: calc((100px) / 2);
+    }
+}
+
+.invisible2 {
+    opacity: 0%;
+}
+
+/* #correctas span {
+    color: #74b9ff;
+}
+
+#incorrectas span {
+    color: #ed222a;
+}
+
+#final {
+    position: absolute;
+    background-color: #c0cbbc;
+} */
+
+.btn-empezar {
+    position: absolute;
+    top: 35px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 5px 15px;
+    background-color: #2596be;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 160px;
+}
+
+.btn-empezar:hover {
+    background-color: #f2bc1b;
+}
+
+/* resultados */
+#final {
+    position: absolute;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px auto;
+    width: 300px;
+    border: 3px solid #2596be;
+}
+
+#final p {
+    font-size: 1.2em;
+    color: #082c4e;
+    margin: 10px 0;
+}
+
+#final p span {
+    font-weight: bold;
+    color: #2596be;
+}
+
+#final button {
+    background-color: #ed222a;
+    color: #f7f7f7;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#final button:hover {
+    background-color: #f2bc1b;
+}
+
+/* Optional: Add a smooth transition effect for showing the results */
+.escondido {
+    display: block; /* Change this as needed to show the element */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.escondido.show {
+    opacity: 1;
+}

@@ -17,6 +17,7 @@
 <link rel="stylesheet" href="{{ asset('css/lecciones.css') }}" />
 <link rel="stylesheet" href="{{ asset('css/piano.css') }}" />
 <link rel="stylesheet" href="{{ asset('css/piano-nivel2.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/piano-juego.css') }}" />
 <link rel="stylesheet" href="{{ asset('css/practica.css') }}" />
 <link rel="stylesheet" href="{{ asset('css/practica1.css') }}" />
 
@@ -42,7 +43,7 @@
           <a href="actividades">Lecciones</a>
           <a href="piano">Piano</a>
           <a href="piano-nivel2">Piano Nivel 2</a>
-          <a href="#">Acerca de</a>
+          <a href="piano-juego">Aprende Jugando</a>
         </nav>
       </div>
     </header>
