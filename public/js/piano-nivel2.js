@@ -46,7 +46,9 @@ let keys = [];
 
 let SetRain = `A3,1,D3,1,F3,1,D3,1,A3,1,D3,1,F3,1,A3,1,,A3,1,C3,1,F3,1,C3,1,A3,1,A#3,1,A3,1,G3,1,G3,1,C3,1,E3,1,C3,1,G3,1,C3,1,E3,1,A#3,1,,A#3,1,D3,1,E3,1,D3,1,A#3,1,D3,1,G3,1,A3,1,,A3,1,D3,1,F3,1,D3,1,A3,1,D3,1,F3,1,A3,1,,A3,1,C3,1,F3,1,C3,1,A3,1,A#3,1,A3,1,G3,1,,G3,1,C3,1,E3,1,C3,1,G3,1,C3,1,E3,1,A#3,1,,A#3,1,D3,1,G3,1,D3,1,A#3,1,D3,1,G3,1,C3,1,C3,1,C3,1`;
 
-let jingleBells = `E4,E4,E4,,E4,E4,E4,,E4,G4,C4,D4,E4,,,,F4,F4,F4,F4,F4,E4,E4,E4,E4,D4,D4,E4,D4,G4`;
+/* let jingleBells = `E4,E4,E4,,E4,E4,E4,,E4,G4,C4,D4,E4,,,,F4,F4,F4,F4,F4,E4,E4,E4,E4,D4,D4,E4,D4,G4`; */
+
+let jingleBells = `E2,,E4,,C2,,G2,,C3,,G2,,C2,,G2,,E2,,C3,,E4,,G2,1,D4,1,E4,1,As1,1,G2,1,As2,1,G2,1,E4,1,As1,1,G2,1,E4,1,E4,As2,1,G2,1,D4,1,D4,1,A1,1,E2,1,A2,1,E2,1,A2,1,Cs4,,E2,,A1,,E1,,A3,A2,,E2`;
 
 let playSong = (notesString, tempo, cb) => {
     let notes = notesString.split(",");

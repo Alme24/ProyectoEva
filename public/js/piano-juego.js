@@ -1,5 +1,5 @@
 /* const palabrasArray = ["pyiypyip", "ptitpPp", "otutotuP", "PyuyPyop"]; */
-const palabrasArray = [
+/* const palabrasArray = [
     "fDfDfadspe",
     "tupa0",
     "uOase",
@@ -16,7 +16,19 @@ const palabrasArray = [
     "ufDfDfadspe",
     "tupa0",
     "usaupe6",
+]; */
+
+const palabrasArray = [
+    "of8wtw8",
+    "wtfwdf7",
+    "wrw7worf",
+    "wdf 6wEw",
+    "f 6wffEw",
+    "dd60es060",
+    "pe0g9ey",
+    "e9peygfe",
 ];
+
 const palabraAnteriorContainer = document.getElementById("palabraAnterior");
 const input = document.querySelector("input");
 const botonEmpezar = document.getElementById("empezar");

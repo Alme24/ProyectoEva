@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="{{ asset('css/piano-juego.css') }}" />
 <link rel="stylesheet" href="{{ asset('css/practica.css') }}" />
 <link rel="stylesheet" href="{{ asset('css/practica1.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/editor.css') }}" />
 
     <title>Musingo</title>
   </head>
@@ -39,7 +40,7 @@
       <div class="menu2">
         <nav class="navigation">
           <a href='/'>Inicio</a>
-          <a href="#">Material</a>
+          <a href="editor-notas">Editor</a>
           <a href="actividades">Lecciones</a>
           <a href="piano">Piano</a>
           <a href="piano-nivel2">Piano Nivel 2</a>

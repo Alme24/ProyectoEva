@@ -22,6 +22,10 @@ class PostController extends Controller
         return view('piano-juego');
     }
 
+     public function editor() {
+        return view('editor');
+    }
+
 
     public function practica1(){
     return view('practica1');
