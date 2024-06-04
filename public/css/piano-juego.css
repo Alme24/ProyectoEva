@@ -58,6 +58,98 @@
     bottom: 0;
 }
 
+.dis_note {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.note_one {
+    left: 120px;
+}
+
+.note_two {
+    left: 240px;
+}
+
+.note_three {
+    left: 360px;
+}
+
+.note_four {
+    left: 480px;
+}
+
+.note_five {
+    left: 600px;
+}
+
+.note_six {
+    left: 720px;
+}
+
+.note_seven {
+    left: 840px;
+}
+
+.note_eight {
+    left: 960px;
+}
+
+.a5{
+    top: -100px;
+}
+
+.g5{
+    top: -75px;
+}
+
+.f5{
+    top: -60px;
+}
+
+.e5{
+    top: -45px;
+}
+
+.d5{
+    top: -30px;
+}
+
+.c5{
+    top: -15px;
+}
+
+.b4{
+    top: 0;
+}
+
+.a4{
+    top: 15px;
+}
+
+.g4{
+    top: 30px;
+}
+
+.f4{
+    top: 45px;
+}
+
+.e4{
+    top: 60px;
+}
+
+.d4{
+    top: 75px;
+}
+
+.c4{
+    top: 100px;
+}
+
 /* .staff_notes .note .primary {
   height: 100%;
 }

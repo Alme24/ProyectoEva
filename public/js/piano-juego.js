@@ -19,7 +19,7 @@
 ]; */
 
 const palabrasArray = [
-    "of8wtw8",
+    "gh8wtw8",
     "wtfwdf7",
     "wrw7worf",
     "wdf 6wEw",
@@ -40,6 +40,8 @@ const botonReiniciar = document.querySelector("#final button");
 const palabraContainer = document.getElementById("palabraActual");
 const pianoKeyboard = document.querySelector(".piano_keyboard");
 const staff = document.querySelector(".piano");
+const notaPrueba = document.getElementById("staff_notez");
+
 
 // variables
 const tiempoJuego = 40;

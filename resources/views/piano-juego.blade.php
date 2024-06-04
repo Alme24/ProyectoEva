@@ -18,12 +18,127 @@
               src="https://sightreading.training/static/svg/clefs.G.svg"
             />
             <div class="lines">
-              <div class="line1 line"></div>
+              <div class="line line"></div>
               <div class="line2 line"></div>
               <div class="line3 line"></div>
               <div class="line4 line"></div>
               <div class="line5 line"></div>
             </div>
+<!-- aqui van canciones -->
+            <div class="dis_note">
+
+            <!-- DESCOMENTAR PARA QUE APAREZCA  -->
+            <!-- arpegio mi menor -->
+
+            <!-- <div class="dis_note note_one e4">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+
+              <div class="dis_note note_two g4">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+
+              <div class="dis_note note_three b4">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+
+              <div class="dis_note note_four d5">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+
+              <div class="dis_note note_five b5">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+
+              <div class="dis_note note_six d4">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+
+              <div class="dis_note note_seven e4">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div> -->
+
+              <!-- #################################################################### -->
+              <!-- vi-ii-V-I en F -->
+
+              <!-- <div class="dis_note note_one a4">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+              <div class="dis_note note_one c5">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+              <div class="dis_note note_one e5">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+
+              <div class="dis_note note_three e4">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+              <div class="dis_note note_three g4">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+              <div class="dis_note note_three b4">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+
+              <div class="dis_note note_five c5">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+              <div class="dis_note note_five e5">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+              <div class="dis_note note_five g5">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+
+              <div class="dis_note note_seven f4">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+              <div class="dis_note note_seven a4">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+              <div class="dis_note note_seven c5">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div> -->
+
+              <!-- ################################################################ -->
+              <!-- ESCALA MAYOR DE DO -->
+
+              <div class="dis_note note_one c4">
+                <img src="{{ asset('imags/quarterNoteExtra.png') }}" class="imagen" />
+              </div>
+
+              <div class="dis_note note_two d4">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+
+              <div class="dis_note note_three e4">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+
+              <div class="dis_note note_four f4">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+
+              <div class="dis_note note_five g4">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+
+              <div class="dis_note note_six a4">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+
+              <div class="dis_note note_seven b4">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+
+              <div class="dis_note note_eight c5">
+                <img src="{{ asset('imags/quarterNote.png') }}" class="imagen" />
+              </div>
+
+            </div>
+
+
 
             <div class="staff_notes" id="palabraActual">
               <!-- S -->
