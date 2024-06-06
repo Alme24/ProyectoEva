@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This is a Reload version 2.5.6 SCORM 1.2 Content Package document-->
+<!--Spawned from the Reload Content Package Generator - http://www.reload.ac.uk-->
+<manifest xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" identifier="MANIFEST-B888F4CA74D030E85D24BA6AF9E00157" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <organizations default="ORG-51A91812E2BDBE31944B1345BE3FBC05">
+    <organization identifier="ORG-51A91812E2BDBE31944B1345BE3FBC05" structure="hierarchical">
+      <title>MUSINGO</title>
+      <item identifier="ITEM-465EE409186862F43BC1977E482E8B7D" identifierref="RES-E4B040421E99B1B3300F82A48A10E139" isvisible="true">
+        <title>Piano</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-E4B040421E99B1B3300F82A48A10E139" type="webcontent" href="index.html">
+      <file href="index.html" />
+      <file href="piano-juego.css" />
+      <file href="piano-juego.js" />
+      <file href="piano-solo.js" />
+      <file href="samples/A1.mp3" />
+      <file href="samples/A2.mp3" />
+      <file href="samples/A3.mp3" />
+      <file href="samples/A4.mp3" />
+      <file href="samples/A5.mp3" />
+      <file href="samples/A6.mp3" />
+      <file href="samples/A7.mp3" />
+      <file href="samples/As1.mp3" />
+      <file href="samples/As2.mp3" />
+      <file href="samples/As3.mp3" />
+      <file href="samples/As4.mp3" />
+      <file href="samples/As5.mp3" />
+      <file href="samples/As6.mp3" />
+      <file href="samples/As7.mp3" />
+      <file href="samples/B1.mp3" />
+      <file href="samples/B2.mp3" />
+      <file href="samples/B3.mp3" />
+      <file href="samples/B4.mp3" />
+      <file href="samples/B5.mp3" />
+      <file href="samples/B6.mp3" />
+      <file href="samples/B7.mp3" />
+      <file href="samples/C1.mp3" />
+      <file href="samples/C2.mp3" />
+      <file href="samples/C3.mp3" />
+      <file href="samples/C4.mp3" />
+      <file href="samples/C5.mp3" />
+      <file href="samples/C6.mp3" />
+      <file href="samples/C7.mp3" />
+      <file href="samples/Cs1.mp3" />
+      <file href="samples/Cs2.mp3" />
+      <file href="samples/Cs3.mp3" />
+      <file href="samples/Cs4.mp3" />
+      <file href="samples/Cs5.mp3" />
+      <file href="samples/D1.mp3" />
+      <file href="samples/D2.mp3" />
+      <file href="samples/D3.mp3" />
+      <file href="samples/D4.mp3" />
+      <file href="samples/D5.mp3" />
+      <file href="samples/D6.mp3" />
+      <file href="samples/D7.mp3" />
+      <file href="samples/Ds1.mp3" />
+      <file href="samples/Ds2.mp3" />
+      <file href="samples/Ds3.mp3" />
+      <file href="samples/Ds4.mp3" />
+      <file href="samples/Ds5.mp3" />
+      <file href="samples/E1.mp3" />
+      <file href="samples/E2.mp3" />
+      <file href="samples/E3.mp3" />
+      <file href="samples/E4.mp3" />
+      <file href="samples/E5.mp3" />
+      <file href="samples/F1.mp3" />
+      <file href="samples/F2.mp3" />
+      <file href="samples/F3.mp3" />
+      <file href="samples/F4.mp3" />
+      <file href="samples/F5.mp3" />
+      <file href="samples/Fs1.mp3" />
+      <file href="samples/Fs2.mp3" />
+      <file href="samples/Fs3.mp3" />
+      <file href="samples/Fs4.mp3" />
+      <file href="samples/Fs5.mp3" />
+      <file href="samples/G1.mp3" />
+      <file href="samples/G2.mp3" />
+      <file href="samples/G3.mp3" />
+      <file href="samples/G4.mp3" />
+      <file href="samples/G5.mp3" />
+      <file href="samples/Gs1.mp3" />
+      <file href="samples/Gs2.mp3" />
+      <file href="samples/Gs3.mp3" />
+      <file href="samples/Gs4.mp3" />
+      <file href="samples/Gs5.mp3" />
+    </resource>
+  </resources>
+</manifest>
+
