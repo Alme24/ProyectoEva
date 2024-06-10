@@ -1,3 +1,24 @@
+
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif; 
+   
+    
+}
+button{
+    font-family: "Comic Sans MS", cursive, sans-serif; 
+}
+#encabezado {
+    background-image: url('/imagen/encab6.jpg'); /* Ruta de tu imagen */
+    background-size: cover; /* Para que la imagen de fondo cubra todo el contenedor */
+    background-position: center; /* Para centrar la imagen */
+    background-attachment: fixed; /* Para que la imagen de fondo no se mueva al hacer scroll */
+    /* Opacidad del fondo opacity: 0.6;*/
+    padding: 100px 0;
+    width: 100%;
+    height: auto; /* Esto asegura que la altura se ajuste automáticamente proporcionalmente al ancho */
+    max-width: 100%; /* Ajusta el espacio superior e inferior del encabezado */
+}
+
 .piano_notas {
     width: 100%;
     background: white;
@@ -58,15 +79,6 @@
     bottom: 0;
 }
 
-/* .staff_notes .note .primary {
-  height: 100%;
-}
-
-.whole_note {
-  width: 50px;
-  height: 50px;
-} */
-
 .escondido {
     display: none;
 }
@@ -75,8 +87,6 @@
     height: 10px;
     width: 100%;
     background-color: #ed222a;
-    /* background-color: #f2bc1b; */
-    /* margin-bottom: 150px; */
     position: absolute;
     top: 0px;
 }
@@ -124,56 +134,23 @@
     animation-duration: 500ms;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
+
 }
 
 @keyframes desaparecer {
     0% {
-        width: 0%;
+        opacity: 1%;
     }
-    50% {
-        color: rgb(69, 91, 169);
-    }
+    
     100% {
-        transform: translateY(-100%);
         opacity: 0%;
-        font-size: calc((100px) / 2);
     }
 }
 
 .invisible2 {
     opacity: 0%;
-}
-
-/* #correctas span {
-    color: #74b9ff;
-}
-
-#incorrectas span {
-    color: #ed222a;
-}
-
-#final {
-    position: absolute;
-    background-color: #c0cbbc;
-} */
-
-.btn-empezar {
-    position: absolute;
-    top: 35px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #ffffff;
-    padding: 5px 15px;
-    background-color: #2596be;
-    cursor: pointer;
-    border: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    width: 160px;
-}
-
-.btn-empezar:hover {
-    background-color: #f2bc1b;
+    display: none;
+  
 }
 
 /* resultados */
@@ -223,6 +200,9 @@
     transition: opacity 0.5s ease-in-out;
 }
 
+.show {
+    display: block;
+} 
 .escondido.show {
     opacity: 1;
 }
@@ -231,7 +211,6 @@
     align-items: center;
     justify-content: center;
     max-width: 1300px;
-    /* margin: 50px; */
     padding: 80px;
     background-color: #ffffff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -345,4 +324,95 @@ select {
     padding-bottom: 1rem;
     display: flex;
     justify-content: center;
+}
+.editor-canciones {
+    margin-top: 20px;
+    
+}
+.editor-canciones select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+/* Estilo para la ventana emergente */
+.ventana-emergente {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    z-index: 9999;
+}
+
+.editor-canciones textarea {
+    font-family: "Comic Sans MS", cursive, sans-serif; 
+    width: 300px; 
+    height: 95px; 
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+
+} 
+
+.botones-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px; 
+}
+
+.botones-container button,
+.botones-container select { 
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #2596be;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    flex-grow: 0; 
+    min-width: 150px; 
+}
+
+.botones-container button:hover,
+.botones-container select:hover {
+    background-color: #f2bc1b;
+}
+
+.editor-canciones {
+    text-align: center;
+}
+
+.editor-canciones h3 {
+    text-align: center;
+    margin: 10px 0;
+    color: #082c4e;
+}
+.botones-editor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.botones-editor button {
+    font-size: 16px;
+    width: 48%; 
+    padding: 10px;
+    background-color: #2596be;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.botones-editor button:hover {
+    background-color: #f2bc1b;
 }

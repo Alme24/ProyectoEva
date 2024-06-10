@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--This is a Reload version 2.5.6 SCORM 1.2 Content Package document-->
 <!--Spawned from the Reload Content Package Generator - http://www.reload.ac.uk-->
-<manifest xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" identifier="MANIFEST-B888F4CA74D030E85D24BA6AF9E00157" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+<manifest xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" 
+          xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" 
+          identifier="MANIFEST-B888F4CA74D030E85D24BA6AF9E00157" 
+          xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd 
+                              http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd 
+                              http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
   <organizations default="ORG-51A91812E2BDBE31944B1345BE3FBC05">
     <organization identifier="ORG-51A91812E2BDBE31944B1345BE3FBC05" structure="hierarchical">
       <title>MUSINGO</title>
@@ -16,6 +23,7 @@
       <file href="piano-juego.css" />
       <file href="piano-juego.js" />
       <file href="piano-solo.js" />
+      <file href="imagen/encab6.jpg" />
       <file href="samples/A1.mp3" />
       <file href="samples/A2.mp3" />
       <file href="samples/A3.mp3" />
@@ -89,4 +97,3 @@
     </resource>
   </resources>
 </manifest>
-

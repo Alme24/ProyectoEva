@@ -3,23 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APRENDE JUGANDO</title>
+    <title>MUSINGO</title>
     <link rel="stylesheet" href="piano-juego.css">
 </head>
 <body>
-    <div class="titulo-carrucel">
-        <h2>APRENDE JUGANDO</h2>
+    <div id="encabezado">
+        <div class="titulo-carrucel">
+            <h1>APRENDE JUGANDO</h1>
+        </div>
+        
+        <div class="botones-container">
+            <button id="empezar">Empezar</button>
+            <button id="abrirEditor">Agregar canción</button>
+            <select id="listaCanciones"></select>
+            <button id="seleccionarCancion">Seleccionar canción</button>
+        </div>
     </div>
-    <div class="piano-cuer">
+
+    <div class="piano-cuer" id="pianos">
         <div id="barraProgreso">
             <div></div>
         </div>
-        <button class="btn-empezar" id="empezar">Empezar</button>
         <div class="piano2">
             <input type="text" class="invisible" />
-            
             <div class="piano_body">
-                <!-- <div class="piano_speaker"></div> -->
                 <div class="piano_notas">
                     <div class="piano_sub">
                         <img class="cleff" src="https://sightreading.training/static/svg/clefs.G.svg" />
@@ -43,6 +50,19 @@
             <p id="correctas">Notas Correctas: <span>0</span></p>
             <p id="incorrectas">Notas Incorrectas: <span>0</span></p>
             <button>Reiniciar</button>
+            <button>Terminar</button>
+        </div>
+
+        <!-- Ventana emergente -->
+        <div id="ventanaEmergente" class="ventana-emergente">
+            <div class="editor-canciones">
+                <h3>EDITOR DE CANCIONES</h3>
+                <textarea id="nuevaCancion" placeholder="Escribe la nueva canción aquí..."></textarea>
+                <div class="botones-editor">
+                    <button id="guardarCancion">Guardar canción</button>
+                    <button id="cancelar">Cancelar</button>
+                </div>
+            </div>
         </div>
     </div>
     <script src="piano-solo.js"></script>
