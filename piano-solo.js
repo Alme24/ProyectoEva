@@ -41,6 +41,7 @@ let keyboardMap = [
 let keys = [];
 
 let init = () => {
+    
     for (let i = 1; i <= 5; i++) {
         for (let j = 0; j < 7; j++) {
             let key = createKey("white", pianoNotes[j], i);
@@ -90,6 +91,7 @@ document.addEventListener("keydown", (e) => {
         return;
     }
     pressKey("mousedown", e);
+    
 });
 
 document.addEventListener("keyup", (e) => {
@@ -97,6 +99,7 @@ document.addEventListener("keyup", (e) => {
 });
 
 let pressKey = (mouseEvent, e) => {
+    
     let lastLetter = e.code.substring(e.code.length - 1);
     let isShiftPressed = e.shiftKey;
     let selector;
@@ -110,6 +113,7 @@ let pressKey = (mouseEvent, e) => {
         let event = new Event(mouseEvent);
         key.dispatchEvent(event);
     }
+    
 };
 
 let playSound = (key) => {

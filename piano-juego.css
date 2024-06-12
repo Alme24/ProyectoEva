@@ -113,8 +113,9 @@ button{
 }
 
 .invisible {
-    position: absolute;
+    position: fixed;
     top: -100000px;
+    left: -100000px;
 }
 
 #palabraActual {
@@ -150,11 +151,11 @@ button{
 .invisible2 {
     opacity: 0%;
     display: none;
-  
 }
 
 /* resultados */
 #final {
+    
     position: absolute;
     background-color: #f7f7f7;
     padding: 20px;
@@ -210,12 +211,12 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 1300px;
-    padding: 80px;
+    /*max-width: 1300px;*/
+    padding: 30px;
     background-color: #ffffff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 0;
-    height: 100vh;
+    /*height: 85vh;*/
     position: relative;
 }
 
