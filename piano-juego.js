@@ -22,7 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let listaLetras = [];
     let indiceActual = 0;
     let palabraActual = "";
-    let tiempoJuego = 5 * palabrasArray.length;
+    let tiempoJuego =0;
+    let totalLetras=0;
+    let puntajeFinal = 0;
     // Inicializar
     guardarCancionBtn.addEventListener("click", guardarCancion);
     seleccionarCancionBtn.addEventListener("click", seleccionarCancion);
@@ -31,8 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
     terminarBtn.addEventListener("click", terminar);
     barraProgreso.addEventListener("animationend", finalizarJuego);
     input.addEventListener("input", manejarInput);
-    
-    document.documentElement.style.setProperty("--tiempo", tiempoJuego + "s");
 
     cargarCanciones();
     
@@ -41,10 +41,10 @@ document.addEventListener("DOMContentLoaded", function () {
         barraProgreso.classList.toggle("completarTiempo", false);
         correctasElement.textContent = letrasCorrectas;
         incorrectasElement.textContent = letrasIncorrectas;
+
         palabraContainer.classList.toggle("escondido", true);
         
     });
-    document.documentElement.style.setProperty("--tiempo", tiempoJuego + "s");
 
     function terminar(){
         Final.classList.add("escondido");
@@ -59,9 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 listaCancionesSelect.classList.remove("escondido");
             }
         })
-        
         // Enviar la nota a Moodle utilizando el método SCORM (agregar tu lógica aquí)
-        setSCORMScore(letrasCorrectas);
+        setSCORMScore(puntajeFinal);
         finishSCORM();
     }
 
@@ -77,6 +76,10 @@ document.addEventListener("DOMContentLoaded", function () {
             palabraActual = listaCancionesSelect.value; 
             nuevaPalabra();
         }
+        tiempoJuego= 1.5 * listaLetras.length;
+        totalLetras = listaLetras.length;
+        document.documentElement.style.setProperty("--tiempo", tiempoJuego + "s");
+        console.log(`El tiempo de juego es: ${tiempoJuego} segundos`);
         barraProgreso.classList.add("completarTiempo");
         botonEmpezar.classList.add("escondido");
         abrirEditorBtn.classList.add("escondido");
@@ -136,11 +139,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function finalizarJuego() {
+        let diferencia = 0;
+        
+        if (letrasIncorrectas > letrasCorrectas){
+            puntajeFinal=0;
+        }else{
+            diferencia= letrasCorrectas - letrasIncorrectas;
+            puntajeFinal= (diferencia*100)/totalLetras;
+        }
         Final.classList.remove("escondido");
         barraProgreso.classList.remove("completarTiempo");
         palabraContainer.classList.add("escondido");
         correctasElement.textContent = letrasCorrectas;
         incorrectasElement.textContent = letrasIncorrectas;
+        console.log(`el puntaje sobre 100 es: ${puntajeFinal} puntos`);
         alert("Juego terminado");
     }
 
@@ -182,6 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => {
             console.error('Error al cargar archivo.txt', error);
         });
+        
     }
 
     function seleccionarCancion() {
@@ -190,7 +203,10 @@ document.addEventListener("DOMContentLoaded", function () {
             palabraActual = seleccion;
             empezar();
         }
+        
     }
+    
+    
     //SCORM
     function initSCORM() {
         // Inicializar la API de SCORM
