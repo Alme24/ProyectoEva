@@ -326,15 +326,6 @@ select {
     display: flex;
     justify-content: center;
 }
-.editor-canciones {
-    margin-top: 20px;
-    
-}
-.editor-canciones select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-}
 /* Estilo para la ventana emergente */
 .ventana-emergente {
     display: none;
@@ -348,9 +339,10 @@ select {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: 1px solid #ccc;
     z-index: 9999;
+    margin-top: 20px;
 }
 
-.editor-canciones textarea {
+.ventana-emergente textarea {
     font-family: "Comic Sans MS", cursive, sans-serif; 
     width: 300px; 
     height: 95px; 
@@ -361,7 +353,11 @@ select {
     resize: none;
 
 } 
-
+.ventana-emergente select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
 .botones-container {
     display: flex;
     justify-content: center;

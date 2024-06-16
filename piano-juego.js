@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     terminarBtn.addEventListener("click", terminar);
     barraProgreso.addEventListener("animationend", finalizarJuego);
     input.addEventListener("input", manejarInput);
-    input.addEventListener("blur", () => input.focus());
+
     document.documentElement.style.setProperty("--tiempo", tiempoJuego + "s");
 
     cargarCanciones();
@@ -59,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
         seleccionarCancionBtn.classList.remove("escondido");
         listaCancionesSelect.classList.remove("escondido");
         // Enviar la nota a Moodle utilizando el método SCORM (agregar tu lógica aquí)
-        
         setSCORMScore(letrasCorrectas);
         finishSCORM();
     }
@@ -82,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
         listaCancionesSelect.classList.add("escondido");
         correctasElement.textContent = letrasCorrectas;
         incorrectasElement.textContent = letrasIncorrectas;
-        input.focus();
     }
     function nuevaPalabra() {
 
@@ -114,7 +112,6 @@ document.addEventListener("DOMContentLoaded", function () {
             listaLetras[indiceActual].classList.remove("letraActual");
             indiceActual++;
             letrasCorrectas++;
-            
             if (indiceActual < listaLetras.length) {
                 listaLetras[indiceActual].classList.add("letraActual");
                 
@@ -122,7 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 palabraActual = ""; 
                 nuevaPalabra();
             }
-        
         } else {
             letrasIncorrectas++;
         }
@@ -137,12 +133,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const nuevaLetra = document.createElement("span");
         nuevaLetra.classList.add("desaparecer");
         nuevaLetra.textContent = letra;
-        
         nuevaLetra.style.left = `${posicionTecla.left}px`;
         nuevaLetra.style.top = `${posicionTecla.top}px`;
-    
         document.body.appendChild(nuevaLetra);
-        
     }
 
     function finalizarJuego() {
