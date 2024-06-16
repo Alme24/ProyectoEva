@@ -48,11 +48,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function terminar(){
         Final.classList.add("escondido");
-        window.scrollTo({top: 0, behavior: "smooth" });
-        botonEmpezar.classList.remove("escondido");
-        abrirEditorBtn.classList.remove("escondido");
-        seleccionarCancionBtn.classList.remove("escondido");
-        listaCancionesSelect.classList.remove("escondido");
+        fetch('archivo.txt')
+        .then(response => response.text())
+        .then(text => {
+            if (text.trim() === "") {
+                window.scrollTo({top: 0, behavior: "smooth" });
+                botonEmpezar.classList.remove("escondido");
+                abrirEditorBtn.classList.remove("escondido");
+                seleccionarCancionBtn.classList.remove("escondido");
+                listaCancionesSelect.classList.remove("escondido");
+            }
+        })
+        
         // Enviar la nota a Moodle utilizando el método SCORM (agregar tu lógica aquí)
         setSCORMScore(letrasCorrectas);
         finishSCORM();
