@@ -16,14 +16,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const abrirEditorBtn = document.getElementById("abrirEditor");
     const ventanaEmergente = document.getElementById("ventanaEmergente");
     const cancelarBtn = document.getElementById("cancelar"); 
-
-    let tiempoJuego = 1.5 * palabrasArray.length;
+    //localStorage.removeItem("canciones");
     let letrasCorrectas = 0;
     let letrasIncorrectas = 0;
     let listaLetras = [];
     let indiceActual = 0;
     let palabraActual = "";
-
+    let tiempoJuego = 5 * palabrasArray.length;
     // Inicializar
     guardarCancionBtn.addEventListener("click", guardarCancion);
     seleccionarCancionBtn.addEventListener("click", seleccionarCancion);
@@ -32,23 +31,19 @@ document.addEventListener("DOMContentLoaded", function () {
     terminarBtn.addEventListener("click", terminar);
     barraProgreso.addEventListener("animationend", finalizarJuego);
     input.addEventListener("input", manejarInput);
-
+    
     document.documentElement.style.setProperty("--tiempo", tiempoJuego + "s");
 
     cargarCanciones();
     
     barraProgreso.addEventListener("animationend", () => {
-        
         Final.classList.toggle("escondido", false);
-        console.log("termino");
         barraProgreso.classList.toggle("completarTiempo", false);
         correctasElement.textContent = letrasCorrectas;
         incorrectasElement.textContent = letrasIncorrectas;
         palabraContainer.classList.toggle("escondido", true);
         
     });
-    
-    input.focus();
     document.documentElement.style.setProperty("--tiempo", tiempoJuego + "s");
 
     function terminar(){
@@ -64,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function empezar() {
+        
         window.scrollTo({top: 450, behavior: "smooth" });
         letrasCorrectas = 0;
         letrasIncorrectas = 0;
@@ -81,52 +77,46 @@ document.addEventListener("DOMContentLoaded", function () {
         listaCancionesSelect.classList.add("escondido");
         correctasElement.textContent = letrasCorrectas;
         incorrectasElement.textContent = letrasIncorrectas;
+        //input.classList.remove("invisible");
+        input.focus();
     }
     function nuevaPalabra() {
 
         if (listaLetras.length > 0) {
             listaLetras.forEach(letra => palabraContainer.removeChild(letra));
         }
-    
         listaLetras = [];
         indiceActual = 0;
-    
         for (let i = 0; i < palabraActual.length; i++) {
             const letrasElement = document.createElement("span");
             letrasElement.textContent = palabraActual[i];
             palabraContainer.appendChild(letrasElement);
             listaLetras.push(letrasElement);
         }
-        
         listaLetras[indiceActual].classList.add("letraActual");
-        
     }
     
 
     function manejarInput(event) {
-        
-        if (event.data === listaLetras[indiceActual].textContent) {
-            const teclaActual = listaLetras[indiceActual];
-            const posicionTecla = teclaActual.getBoundingClientRect();
-            crearLetraEfecto(listaLetras[indiceActual], posicionTecla);
-            listaLetras[indiceActual].classList.remove("letraActual");
-            indiceActual++;
-            letrasCorrectas++;
-            if (indiceActual < listaLetras.length) {
-                listaLetras[indiceActual].classList.add("letraActual");
-                
+            if (event.data === listaLetras[indiceActual].textContent) {
+                const teclaActual = listaLetras[indiceActual];
+                const posicionTecla = teclaActual.getBoundingClientRect();
+                crearLetraEfecto(listaLetras[indiceActual], posicionTecla);
+                listaLetras[indiceActual].classList.remove("letraActual");
+                indiceActual++;
+                letrasCorrectas++;
+                if (indiceActual < listaLetras.length) {
+                    listaLetras[indiceActual].classList.add("letraActual");
+                } else {
+                    palabraActual = "";
+                    nuevaPalabra();
+                }
             } else {
-                palabraActual = ""; 
-                nuevaPalabra();
+                letrasIncorrectas++;
             }
-        } else {
-            letrasIncorrectas++;
-        }
-        correctasElement.textContent = letrasCorrectas;
-        incorrectasElement.textContent = letrasIncorrectas;
-        
+            correctasElement.textContent = letrasCorrectas;
+            incorrectasElement.textContent = letrasIncorrectas;
     }
-
     function crearLetraEfecto(element, posicionTecla) {
         element.classList.add("invisible2");
         const letra = element.textContent;
@@ -162,12 +152,28 @@ document.addEventListener("DOMContentLoaded", function () {
     
 
     function cargarCanciones() {
-        listaCancionesSelect.innerHTML = "";
-        palabrasArray.forEach((cancion, index) => {
-            const option = document.createElement("option");
-            option.value = cancion;
-            option.textContent = `Canción ${index + 1}`;
-            listaCancionesSelect.appendChild(option);
+        fetch('archivo.txt')
+        .then(response => response.text())
+        .then(text => {
+            if (text.trim().length > 0) {
+                const nuevaCancion = text.trim();
+                palabrasArray.push(nuevaCancion); // Agregar la canción al arreglo de canciones
+                listaCancionesSelect.value = nuevaCancion; // Seleccionar automáticamente la nueva canción
+                abrirEditorBtn.classList.add("escondido");
+                seleccionarCancionBtn.classList.add("escondido");
+                listaCancionesSelect.classList.add("escondido");
+            }
+            // Actualizar siempre el select de canciones después de intentar cargar desde archivo.txt
+            listaCancionesSelect.innerHTML = "";
+            palabrasArray.forEach((cancion, index) => {
+                const option = document.createElement("option");
+                option.value = cancion;
+                option.textContent = `Canción ${index + 1}`;
+                listaCancionesSelect.appendChild(option);
+            });
+        })
+        .catch(error => {
+            console.error('Error al cargar archivo.txt', error);
         });
     }
 
