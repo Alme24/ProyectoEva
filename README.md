@@ -43,7 +43,7 @@ zip -r ProyectoEva.zip ProyectoEva
 ```
 4. Sube el ProyectoEva.zip como un scorm a tu curso.
 
-Puedes seguir el tutorial de como subir a la plataforma moodle que esta en ComoSubir.pdf
+Puedes seguir el tutorial de como subir a la plataforma moodle que esta en Comosubir.pdf
 
 ## 👟 Correr Localmente
 
@@ -63,6 +63,7 @@ Puedes seguir el tutorial de como subir a la plataforma moodle que esta en ComoS
 ```bash
   open index.html
 ```
+Se presenta un manual de instalción del LMS moodle si se quiere realizar la prueba desde un curso local.
 
 ## 👆 Uso
 * Para profesor:
@@ -70,8 +71,7 @@ Puedes seguir el tutorial de como subir a la plataforma moodle que esta en ComoS
     Si quiere usar el paquete scorm como una evaluación, agrege una canción en notación en cifrado americano al archivo.txt.
     
     Si quiere utlizarlo para que los estudiantes de su curso practiquen, suba el paquete scorm asegurese que el archivo.txt este vacio.
-
-
+  
 ## 🛠 Herramientas
 ![Javascript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![html](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
