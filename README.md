@@ -43,7 +43,7 @@ zip -r ProyectoEva.zip ProyectoEva
 ```
 4. Sube el ProyectoEva.zip como un scorm a tu curso.
 
-Puedes seguir el tutorial de como subir a la plataforma moodle que esta en Comosubir.pdf
+Puedes seguir el tutorial de como subir a la plataforma moodle que esta en Manual de Usuario.pdf
 
 ## 👟 Correr Localmente
 
