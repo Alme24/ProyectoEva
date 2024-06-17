@@ -61,33 +61,7 @@ Puedes seguir el tutotial de como subir a la plataforma moodle que esta en ComoS
 ```bash
   open index.html
 ```
-## Diagrama de flujo
 
-```flow
-st=>start: Inicio
-cond=>condition: ¿archivo.txt está vacío?
-op=>operation: Empezar
-rest=>operation: Reiniciar
-e=>end: Fin
-set=>inputoutput: Agregar canción
-guar=>operation: Guardar canción
-select=>operation: Seleccionar canción
-ini=>operation: Iniciar a tocar
-
-fin=>operation: Terminar
-error=>operation: Manejar error
-
-st->cond
-cond(yes)->set
-cond(no)->op
-set->guar->select->op
-op->ini
-ini->rest
-rest->op
-op->fin
-fin->e
-error->e
-```
 ## 👆 Uso
 * Para profesor:
     
