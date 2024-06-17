@@ -42,7 +42,9 @@ En Linux:
 zip -r ProyectoEva.zip ProyectoEva
 ```
 4. Sube el ProyectoEva.zip como un scorm a tu curso.
-Puedes seguir el tutotial de como subir a la plataforma moodle que esta en ComoSubir.pdf
+
+Puedes seguir el tutorial de como subir a la plataforma moodle que esta en ComoSubir.pdf
+
 ## 👟 Correr Localmente
 
 1. Clonar este proyecto:
