@@ -78,8 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
             palabraActual = listaCancionesSelect.value;
             nuevaPalabra();
         }
-        /* tiempoJuego = 1.5 * listaLetras.length; */
-        tiempoJuego = 40;
+        tiempoJuego = 1.5 * palabraActual.length;
+        /* tiempoJuego = 40; */
         totalLetras = palabraActual.length;
         document.documentElement.style.setProperty(
             "--tiempo",
@@ -114,63 +114,299 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const subconjunto = palabraElegida[subconjuntoIndex];
-        console.log(subconjunto);
+        subconjuntoDisplay.textContent = subconjunto;
         listaLetras = [];
         for (let i = 0; i < subconjunto.length; i++) {
             const letrasElement = document.createElement("span");
 
             if (
-                subconjunto[i] === "p" ||
+                subconjunto[i] === "q" ||
+                subconjunto[i] === "w" ||
+                subconjunto[i] === "e" ||
+                subconjunto[i] === "r" ||
+                subconjunto[i] === "t" ||
                 subconjunto[i] === "y" ||
+                subconjunto[i] === "u" ||
                 subconjunto[i] === "i" ||
+                subconjunto[i] === "o" ||
+                subconjunto[i] === "p" ||
                 subconjunto[i] === "a" ||
                 subconjunto[i] === "s" ||
                 subconjunto[i] === "d" ||
                 subconjunto[i] === "f" ||
                 subconjunto[i] === "g" ||
-                subconjunto[i] === "h"
+                subconjunto[i] === "h" ||
+                subconjunto[i] === "j" ||
+                subconjunto[i] === "k" ||
+                subconjunto[i] === "l" ||
+                subconjunto[i] === "z" ||
+                subconjunto[i] === "x" ||
+                subconjunto[i] === "c" ||
+                subconjunto[i] === "v" ||
+                subconjunto[i] === "b" ||
+                subconjunto[i] === "n" ||
+                subconjunto[i] === "Q" ||
+                subconjunto[i] === "W" ||
+                subconjunto[i] === "E" ||
+                subconjunto[i] === "T" ||
+                subconjunto[i] === "Y" ||
+                subconjunto[i] === "I" ||
+                subconjunto[i] === "O" ||
+                subconjunto[i] === "P" ||
+                subconjunto[i] === "S" ||
+                subconjunto[i] === "D" ||
+                subconjunto[i] === "G" ||
+                subconjunto[i] === "H" ||
+                subconjunto[i] === "J" ||
+                subconjunto[i] === "L" ||
+                subconjunto[i] === "Z" ||
+                subconjunto[i] === "C" ||
+                subconjunto[i] === "V" ||
+                subconjunto[i] === "B" ||
+                subconjunto[i] === "1" ||
+                subconjunto[i] === "2" ||
+                subconjunto[i] === "3" ||
+                subconjunto[i] === "4" ||
+                subconjunto[i] === "5" ||
+                subconjunto[i] === "6" ||
+                subconjunto[i] === "7" ||
+                subconjunto[i] === "8" ||
+                subconjunto[i] === "9" ||
+                subconjunto[i] === "0"
             ) {
                 const imgElement = document.createElement("img");
                 imgElement.style.width = "50px";
                 imgElement.style.height = "50px";
                 imgElement.style.position = "absolute";
 
-                if (subconjunto[i] === "p") {
-                    imgElement.src = "notas/quarterNote.png";
-                    imgElement.style.left = "70px";
-                    imgElement.style.top = "40px";
-                } else if (subconjunto[i] === "y") {
-                    imgElement.src = "notas/quarterNoteExtra.png";
-                    imgElement.style.left = "150px";
-                    imgElement.style.top = "50px";
-                } else if (subconjunto[i] === "i") {
-                    imgElement.src = "notas/quarterNote.png";
-                    imgElement.style.left = "450px";
+                if (subconjunto[i] === "s") {
+                    imgElement.src = "quarterNoteExtra.png";
+                    imgElement.style.left = "110px";
+                    imgElement.style.top = "100px";
+                } else if (subconjunto[i] === "d") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "510px";
+                    imgElement.style.top = "75px";
+                } else if (subconjunto[i] === "f") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "120px";
                     imgElement.style.top = "60px";
-                } else if (subconjunto[i] === "a") {
-                    imgElement.src = "notas/quarterNoteExtra.png";
-                    imgElement.style.left = "280px";
-                    imgElement.style.top = "70px";
+                } else if (subconjunto[i] === "g") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "120px";
+                    imgElement.style.top = "63px";
                 } else if (subconjunto[i] === "s") {
-                    imgElement.src = "notas/quarterNoteExtra.png";
+                    imgElement.src = "quarterNoteExtra.png";
                     imgElement.style.left = "320px";
                     imgElement.style.top = "40px";
                 } else if (subconjunto[i] === "d") {
-                    imgElement.src = "notas/quarterNoteExtra.png";
+                    imgElement.src = "quarterNoteExtra.png";
                     imgElement.style.left = "420px";
                     imgElement.style.top = "50px";
                 } else if (subconjunto[i] === "f") {
-                    imgElement.src = "notas/quarterNoteExtra.png";
+                    imgElement.src = "quarterNoteExtra.png";
                     imgElement.style.left = "200px";
                     imgElement.style.top = "60px";
                 } else if (subconjunto[i] === "g") {
-                    imgElement.src = "notas/quarterNoteExtra.png";
+                    imgElement.src = "quarterNoteExtra.png";
                     imgElement.style.left = "390px";
                     imgElement.style.top = "70px";
                 } else if (subconjunto[i] === "h") {
-                    imgElement.src = "notas/quarterNote.png";
-                    imgElement.style.left = "370px";
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "420px";
+                    imgElement.style.top = "30px";
+                } else if (subconjunto[i] === "j") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "120px";
+                    imgElement.style.top = "15px";
+                } else if (subconjunto[i] === "k") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "325px";
+                    imgElement.style.top = "0px";
+                } else if (subconjunto[i] === "l") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "180px";
+                    imgElement.style.top = "18px";
+                } else if (subconjunto[i] === "z") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "320px";
+                    imgElement.style.top = "-15px";
+                } else if (subconjunto[i] === "x") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "220px";
+                    imgElement.style.top = "-19px";
+                } else if (subconjunto[i] === "c") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "135px";
+                    imgElement.style.top = "-10px";
+                } else if (subconjunto[i] === "v") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "142px";
+                    imgElement.style.top = "20px";
+                } else if (subconjunto[i] === "b") {
+                    imgElement.src = "quarterNoteExtra.png";
+                    imgElement.style.left = "250px";
+                    imgElement.style.top = "45px";
+                } else if (subconjunto[i] === "n") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "350px";
+                    imgElement.style.top = "50px";
+                } else if (subconjunto[i] === "a") {
+                    imgElement.src = "quarterNoteExtra.png";
+                    imgElement.style.left = "333px";
+                    imgElement.style.top = "10px";
+                } else if (subconjunto[i] === "p") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "160px";
                     imgElement.style.top = "60px";
+                } else if (subconjunto[i] === "o") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "210px";
+                    imgElement.style.top = "65px";
+                } else if (subconjunto[i] === "i") {
+                    imgElement.src = "quarterNoteExtra.png";
+                    imgElement.style.left = "249px";
+                    imgElement.style.top = "-5px";
+                } else if (subconjunto[i] === "u") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "410px";
+                    imgElement.style.top = "72px";
+                } else if (subconjunto[i] === "y") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "515px";
+                    imgElement.style.top = "78px";
+                } else if (subconjunto[i] === "t") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "605px";
+                    imgElement.style.top = "36px";
+                } else if (subconjunto[i] === "r") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "98px";
+                    imgElement.style.top = "72px";
+                } else if (subconjunto[i] === "e") {
+                    imgElement.src = "quarterNoteExtra.png";
+                    imgElement.style.left = "325px";
+                    imgElement.style.top = "44px";
+                } else if (subconjunto[i] === "w") {
+                    imgElement.src = "quarterNoteExtra.png";
+                    imgElement.style.left = "362px";
+                    imgElement.style.top = "57px";
+                } else if (subconjunto[i] === "9") {
+                    imgElement.src = "quarterNoteExtra.png";
+                    imgElement.style.left = "72px";
+                    imgElement.style.top = "46px";
+                } else if (subconjunto[i] === "8") {
+                    imgElement.src = "quarterNoteExtra.png";
+                    imgElement.style.left = "505px";
+                    imgElement.style.top = "70px";
+                } else if (subconjunto[i] === "q") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "455px";
+                    imgElement.style.top = "80px";
+                } else if (subconjunto[i] === "0") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "163px";
+                    imgElement.style.top = "32px";
+                } else if (subconjunto[i] === "7") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "385px";
+                    imgElement.style.top = "20px";
+                } else if (subconjunto[i] === "6") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "168px";
+                    imgElement.style.top = "48px";
+                } else if (subconjunto[i] === "5") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "496px";
+                    imgElement.style.top = "60px";
+                } else if (subconjunto[i] === "4") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "123px";
+                    imgElement.style.top = "69px";
+                } else if (subconjunto[i] === "3") {
+                    imgElement.src = "quarterNoteExtra.png";
+                    imgElement.style.left = "156px";
+                    imgElement.style.top = "56px";
+                } else if (subconjunto[i] === "2") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "120px";
+                    imgElement.style.top = "65px";
+                } else if (subconjunto[i] === "1") {
+                    imgElement.src = "quarterNoteExtra.png";
+                    imgElement.style.left = "429px";
+                    imgElement.style.top = "59px";
+                } else if (subconjunto[i] === "Q") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "412px";
+                    imgElement.style.top = "46px";
+                } else if (subconjunto[i] === "W") {
+                    imgElement.src = "quarterNoteExtra.png";
+                    imgElement.style.left = "333px";
+                    imgElement.style.top = "80px";
+                } else if (subconjunto[i] === "E") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "530px";
+                    imgElement.style.top = "69px";
+                } else if (subconjunto[i] === "T") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "336px";
+                    imgElement.style.top = "65px";
+                } else if (subconjunto[i] === "Y") {
+                    imgElement.src = "quarterNoteExtra.png";
+                    imgElement.style.left = "523px";
+                    imgElement.style.top = "-5px";
+                } else if (subconjunto[i] === "I") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "495px";
+                    imgElement.style.top = "82px";
+                } else if (subconjunto[i] === "O") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "469px";
+                    imgElement.style.top = "73px";
+                } else if (subconjunto[i] === "P") {
+                    imgElement.src = "quarterNoteExtra.png";
+                    imgElement.style.left = "542px";
+                    imgElement.style.top = "65px";
+                } else if (subconjunto[i] === "S") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "555px";
+                    imgElement.style.top = "46px";
+                } else if (subconjunto[i] === "D") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "475px";
+                    imgElement.style.top = "49px";
+                } else if (subconjunto[i] === "G") {
+                    imgElement.src = "quarterNoteExtra.png";
+                    imgElement.style.left = "555px";
+                    imgElement.style.top = "55px";
+                } else if (subconjunto[i] === "H") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "600px";
+                    imgElement.style.top = "62px";
+                } else if (subconjunto[i] === "J") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "583px";
+                    imgElement.style.top = "42px";
+                } else if (subconjunto[i] === "L") {
+                    imgElement.src = "quarterNoteExtra.png";
+                    imgElement.style.left = "620px";
+                    imgElement.style.top = "50px";
+                } else if (subconjunto[i] === "Z") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "575px";
+                    imgElement.style.top = "78px";
+                } else if (subconjunto[i] === "C") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "586px";
+                    imgElement.style.top = "49px";
+                } else if (subconjunto[i] === "V") {
+                    imgElement.src = "quarterNoteExtra.png";
+                    imgElement.style.left = "596px";
+                    imgElement.style.top = "79px";
+                } else if (subconjunto[i] === "B") {
+                    imgElement.src = "quarterNote.png";
+                    imgElement.style.left = "620px";
+                    imgElement.style.top = "35px";
                 }
 
                 letrasElement.appendChild(imgElement);

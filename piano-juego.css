@@ -5,7 +5,7 @@ button {
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
 #encabezado {
-    background-image: url("/imagen/encab6.jpg"); /* Ruta de tu imagen */
+    background-image: url("encab6.jpg"); /* Ruta de tu imagen */
     background-size: cover; /* Para que la imagen de fondo cubra todo el contenedor */
     background-position: center; /* Para centrar la imagen */
     background-attachment: fixed; /* Para que la imagen de fondo no se mueva al hacer scroll */
@@ -406,4 +406,12 @@ select {
 
 .botones-editor button:hover {
     background-color: #f2bc1b;
+}
+
+#subconjuntoDisplay {
+    position: absolute;
+    top: 0;
+    font-size: 38px;
+    left: 540px;
+    color: #ed222a;
 }
