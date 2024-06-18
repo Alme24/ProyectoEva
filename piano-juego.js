@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         /* tiempoJuego = 1.5 * listaLetras.length; */
         tiempoJuego = 40;
-        totalLetras = listaLetras.length;
+        totalLetras = palabraActual.length;
         document.documentElement.style.setProperty(
             "--tiempo",
             tiempoJuego + "s"
@@ -106,110 +106,104 @@ document.addEventListener("DOMContentLoaded", function () {
         return subconjuntos;
     }
 
-    function nuevaPalabra() {
-        if (listaLetras.length > 0) {
-            listaLetras.forEach((letra) => palabraContainer.removeChild(letra));
+    function procesarSubconjunto(subconjuntoIndex) {
+        if (!palabraElegida[subconjuntoIndex]) return;
+
+        while (palabraContainer.firstChild) {
+            palabraContainer.removeChild(palabraContainer.firstChild);
         }
+
+        const subconjunto = palabraElegida[subconjuntoIndex];
+        console.log(subconjunto);
         listaLetras = [];
-        indiceActual = 0;
+        for (let i = 0; i < subconjunto.length; i++) {
+            const letrasElement = document.createElement("span");
 
-        const palabraElegida = dividirEnSubconjuntos(palabraActual);
-        let subconjuntoActual = 0;
+            if (
+                subconjunto[i] === "p" ||
+                subconjunto[i] === "y" ||
+                subconjunto[i] === "i" ||
+                subconjunto[i] === "a" ||
+                subconjunto[i] === "s" ||
+                subconjunto[i] === "d" ||
+                subconjunto[i] === "f" ||
+                subconjunto[i] === "g" ||
+                subconjunto[i] === "h"
+            ) {
+                const imgElement = document.createElement("img");
+                imgElement.style.width = "50px";
+                imgElement.style.height = "50px";
+                imgElement.style.position = "absolute";
 
-        function procesarSubconjunto(subconjuntoIndex) {
-            while (palabraContainer.firstChild) {
-                palabraContainer.removeChild(palabraContainer.firstChild);
-            }
-
-            const subconjunto = palabraElegida[subconjuntoIndex];
-
-            for (let i = 0; i < subconjunto.length; i++) {
-                const letrasElement = document.createElement("span");
-
-                if (
-                    subconjunto[i] === "p" ||
-                    subconjunto[i] === "y" ||
-                    subconjunto[i] === "i" ||
-                    subconjunto[i] === "a" ||
-                    subconjunto[i] === "s" ||
-                    subconjunto[i] === "d" ||
-                    subconjunto[i] === "f" ||
-                    subconjunto[i] === "g" ||
-                    subconjunto[i] === "h"
-                ) {
-                    const imgElement = document.createElement("img");
-                    imgElement.style.width = "50px";
-                    imgElement.style.height = "50px";
-                    imgElement.style.position = "absolute";
-
-                    if (subconjunto[i] === "p") {
-                        imgElement.src = "notas/quarterNote.png";
-                        imgElement.style.left = "70px";
-                        imgElement.style.top = "40px";
-                    } else if (subconjunto[i] === "y") {
-                        imgElement.src = "notas/quarterNoteExtra.png";
-                        imgElement.style.left = "150px";
-                        imgElement.style.top = "50px";
-                    } else if (subconjunto[i] === "i") {
-                        imgElement.src = "notas/quarterNote.png";
-                        imgElement.style.left = "450px";
-                        imgElement.style.top = "60px";
-                    } else if (subconjunto[i] === "a") {
-                        imgElement.src = "notas/quarterNoteExtra.png";
-                        imgElement.style.left = "280px";
-                        imgElement.style.top = "70px";
-                    } else if (subconjunto[i] === "s") {
-                        imgElement.src = "notas/quarterNoteExtra.png";
-                        imgElement.style.left = "320px";
-                        imgElement.style.top = "40px";
-                    } else if (subconjunto[i] === "d") {
-                        imgElement.src = "notas/quarterNoteExtra.png";
-                        imgElement.style.left = "420px";
-                        imgElement.style.top = "50px";
-                    } else if (subconjunto[i] === "f") {
-                        imgElement.src = "notas/quarterNoteExtra.png";
-                        imgElement.style.left = "200px";
-                        imgElement.style.top = "60px";
-                    } else if (subconjunto[i] === "g") {
-                        imgElement.src = "notas/quarterNoteExtra.png";
-                        imgElement.style.left = "390px";
-                        imgElement.style.top = "70px";
-                    } else if (subconjunto[i] === "h") {
-                        imgElement.src = "notas/quarterNote.png";
-                        imgElement.style.left = "370px";
-                        imgElement.style.top = "60px";
-                    }
-
-                    letrasElement.appendChild(imgElement);
-                    letrasElement.dataset.letra = subconjunto[i];
-                    listaLetras.push(letrasElement);
-                } else {
-                    letrasElement.textContent = subconjunto[i];
-                    listaLetras.push(letrasElement);
+                if (subconjunto[i] === "p") {
+                    imgElement.src = "notas/quarterNote.png";
+                    imgElement.style.left = "70px";
+                    imgElement.style.top = "40px";
+                } else if (subconjunto[i] === "y") {
+                    imgElement.src = "notas/quarterNoteExtra.png";
+                    imgElement.style.left = "150px";
+                    imgElement.style.top = "50px";
+                } else if (subconjunto[i] === "i") {
+                    imgElement.src = "notas/quarterNote.png";
+                    imgElement.style.left = "450px";
+                    imgElement.style.top = "60px";
+                } else if (subconjunto[i] === "a") {
+                    imgElement.src = "notas/quarterNoteExtra.png";
+                    imgElement.style.left = "280px";
+                    imgElement.style.top = "70px";
+                } else if (subconjunto[i] === "s") {
+                    imgElement.src = "notas/quarterNoteExtra.png";
+                    imgElement.style.left = "320px";
+                    imgElement.style.top = "40px";
+                } else if (subconjunto[i] === "d") {
+                    imgElement.src = "notas/quarterNoteExtra.png";
+                    imgElement.style.left = "420px";
+                    imgElement.style.top = "50px";
+                } else if (subconjunto[i] === "f") {
+                    imgElement.src = "notas/quarterNoteExtra.png";
+                    imgElement.style.left = "200px";
+                    imgElement.style.top = "60px";
+                } else if (subconjunto[i] === "g") {
+                    imgElement.src = "notas/quarterNoteExtra.png";
+                    imgElement.style.left = "390px";
+                    imgElement.style.top = "70px";
+                } else if (subconjunto[i] === "h") {
+                    imgElement.src = "notas/quarterNote.png";
+                    imgElement.style.left = "370px";
+                    imgElement.style.top = "60px";
                 }
 
-                palabraContainer.appendChild(letrasElement);
+                letrasElement.appendChild(imgElement);
+                letrasElement.dataset.letra = subconjunto[i];
+                listaLetras.push(letrasElement);
+            } else {
+                letrasElement.textContent = subconjunto[i];
+                listaLetras.push(letrasElement);
             }
 
-            if (listaLetras[indiceActual]) {
-                listaLetras[indiceActual].classList.add("letraActual");
-            }
+            palabraContainer.appendChild(letrasElement);
         }
 
-        procesarSubconjunto(subconjuntoActual);
-
-        function avanzarSubconjunto() {
-            if (subconjuntoActual < palabraElegida.length - 1) {
-                subconjuntoActual++;
-                indiceActual = 0;
-                procesarSubconjunto(subconjuntoActual);
-            }
+        if (listaLetras[indiceActual]) {
+            listaLetras[indiceActual].classList.add("letraActual");
         }
-
-        return avanzarSubconjunto;
     }
 
-    // En manejarInput, llamar a avanzarSubconjunto después de validar la letra
+    function avanzarSubconjunto() {
+        if (subconjuntoActual < palabraElegida.length - 1) {
+            subconjuntoActual++;
+            indiceActual = 0;
+            procesarSubconjunto(subconjuntoActual);
+        }
+    }
+
+    function nuevaPalabra() {
+        palabraElegida = dividirEnSubconjuntos(palabraActual);
+        subconjuntoActual = 0;
+        indiceActual = 0;
+        procesarSubconjunto(subconjuntoActual);
+    }
+
     function manejarInput(event) {
         const letraActual = listaLetras[indiceActual];
         const letraCorrecta = letraActual.dataset.letra;
@@ -224,7 +218,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if (indiceActual < listaLetras.length) {
                 listaLetras[indiceActual].classList.add("letraActual");
             } else {
-                const avanzarSubconjunto = nuevaPalabra();
                 avanzarSubconjunto();
             }
         } else {
@@ -233,6 +226,9 @@ document.addEventListener("DOMContentLoaded", function () {
         correctasElement.textContent = letrasCorrectas;
         incorrectasElement.textContent = letrasIncorrectas;
     }
+
+    // Inicializa la primera palabra
+    nuevaPalabra();
 
     function crearLetraEfecto(element, posicionTecla) {
         element.classList.add("invisible2");
