@@ -1,14 +1,11 @@
-
 body {
-    font-family: "Comic Sans MS", cursive, sans-serif; 
-   
-    
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
-button{
-    font-family: "Comic Sans MS", cursive, sans-serif; 
+button {
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 #encabezado {
-    background-image: url('/imagen/encab6.jpg'); /* Ruta de tu imagen */
+    background-image: url("encab6.jpg"); /* Ruta de tu imagen */
     background-size: cover; /* Para que la imagen de fondo cubra todo el contenedor */
     background-position: center; /* Para centrar la imagen */
     background-attachment: fixed; /* Para que la imagen de fondo no se mueva al hacer scroll */
@@ -120,7 +117,7 @@ button{
 
 #palabraActual {
     /* text-align: center; */
-    margin-left: 220px;
+    /* margin-left: 220px; */
     font-size: 100px;
 }
 
@@ -135,14 +132,13 @@ button{
     animation-duration: 500ms;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
-
 }
 
 @keyframes desaparecer {
     0% {
         opacity: 1%;
     }
-    
+
     100% {
         opacity: 0%;
     }
@@ -155,7 +151,6 @@ button{
 
 /* resultados */
 #final {
-    
     position: absolute;
     background-color: #f7f7f7;
     padding: 20px;
@@ -203,7 +198,7 @@ button{
 
 .show {
     display: block;
-} 
+}
 .escondido.show {
     opacity: 1;
 }
@@ -343,16 +338,15 @@ select {
 }
 
 .ventana-emergente textarea {
-    font-family: "Comic Sans MS", cursive, sans-serif; 
-    width: 300px; 
-    height: 95px; 
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    width: 300px;
+    height: 95px;
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     resize: none;
-
-} 
+}
 .ventana-emergente select {
     width: 100%;
     padding: 10px;
@@ -363,11 +357,11 @@ select {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 .botones-container button,
-.botones-container select { 
+.botones-container select {
     font-size: 16px;
     padding: 10px 20px;
     background-color: #2596be;
@@ -376,8 +370,8 @@ select {
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
-    flex-grow: 0; 
-    min-width: 150px; 
+    flex-grow: 0;
+    min-width: 150px;
 }
 
 .botones-container button:hover,
@@ -401,7 +395,7 @@ select {
 
 .botones-editor button {
     font-size: 16px;
-    width: 48%; 
+    width: 48%;
     padding: 10px;
     background-color: #2596be;
     color: white;
@@ -412,4 +406,12 @@ select {
 
 .botones-editor button:hover {
     background-color: #f2bc1b;
+}
+
+#subconjuntoDisplay {
+    position: absolute;
+    top: 0;
+    font-size: 38px;
+    left: 540px;
+    color: #ed222a;
 }

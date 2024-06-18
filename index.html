@@ -1,70 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MUSINGO</title>
-    <link rel="stylesheet" href="piano-juego.css">
-</head>
-<body>
-    <div id="encabezado">
-        <div class="titulo-carrucel">
-            <h1>APRENDE JUGANDO</h1>
-        </div>
-        
-        <div class="botones-container">
-            <button id="empezar">Empezar</button>
-            <button id="abrirEditor">Agregar canción</button>
-            <select id="listaCanciones"></select>
-            <button id="seleccionarCancion">Seleccionar canción</button>
-        </div>
-    </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MUSINGO</title>
+        <link rel="stylesheet" href="piano-juego.css" />
+    </head>
+    <body>
+        <div id="encabezado">
+            <div class="titulo-carrucel">
+                <h1>APRENDE JUGANDO</h1>
+            </div>
 
-    <div class="piano-cuer" id="pianos">
-        <div id="barraProgreso">
-            <div></div>
+            <div class="botones-container">
+                <button id="empezar">Empezar</button>
+                <button id="abrirEditor">Agregar canción</button>
+                <select id="listaCanciones"></select>
+                <button id="seleccionarCancion">Seleccionar canción</button>
+            </div>
         </div>
-        <div class="piano2">
-            <input type="text" class="invisible" />
-            <div class="piano_body">
-                <div class="piano_notas">
-                    <div class="piano_sub">
-                        <img class="cleff" src="https://sightreading.training/static/svg/clefs.G.svg" />
-                        <div class="lines">
-                            <div class="line1 line"></div>
-                            <div class="line2 line"></div>
-                            <div class="line3 line"></div>
-                            <div class="line4 line"></div>
-                            <div class="line5 line"></div>
-                        </div>
 
-                        <div class="staff_notes" id="palabraActual">
-                            <!-- S -->
+        <div class="piano-cuer" id="pianos">
+            <div id="barraProgreso">
+                <div></div>
+            </div>
+            <div class="piano2">
+                <input type="text" class="invisible" />
+                <div class="piano_body">
+                    <div class="piano_notas">
+                        <div id="subconjuntoDisplay"></div>
+
+                        <div class="piano_sub">
+                            <img
+                                class="cleff"
+                                src="https://sightreading.training/static/svg/clefs.G.svg"
+                            />
+                            <div class="lines">
+                                <div class="line1 line"></div>
+                                <div class="line2 line"></div>
+                                <div class="line3 line"></div>
+                                <div class="line4 line"></div>
+                                <div class="line5 line"></div>
+                            </div>
+
+                            <div class="staff_notes" id="palabraActual">
+                                <!-- S -->
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="piano_keyboard"></div>
             </div>
-            <div class="piano_keyboard"></div>
-        </div>
-        <div class="escondido" id="final">
-            <p id="correctas">Notas Correctas: <span>0</span></p>
-            <p id="incorrectas">Notas Incorrectas: <span>0</span></p>
+            <div class="escondido" id="final">
+                <p id="correctas">Notas Correctas: <span>0</span></p>
+                <p id="incorrectas">Notas Incorrectas: <span>0</span></p>
 
-            <button>Reiniciar</button>
-            <button id="terminar">Terminar</button>
-        </div>
+                <button>Reiniciar</button>
+                <button id="terminar">Terminar</button>
+            </div>
 
-        <!-- Ventana emergente -->
-        <div id="ventanaEmergente" class="ventana-emergente">
-            <h3>EDITOR DE CANCIONES</h3>
-            <textarea id="nuevaCancion" placeholder="Escribe la nueva canción aquí..."></textarea>
-            <div class="botones-editor">
-                <button id="guardarCancion">Guardar canción</button>
-                <button id="cancelar">Cancelar</button>
+            <!-- Ventana emergente -->
+            <div id="ventanaEmergente" class="ventana-emergente">
+                <h3>EDITOR DE CANCIONES</h3>
+                <textarea
+                    id="nuevaCancion"
+                    placeholder="Escribe la nueva canción aquí..."
+                ></textarea>
+                <div class="botones-editor">
+                    <button id="guardarCancion">Guardar canción</button>
+                    <button id="cancelar">Cancelar</button>
+                </div>
             </div>
         </div>
-    </div>
-    <script src="piano-solo.js"></script>
-    <script src="piano-juego.js"></script>
-</body>
+        <script src="piano-solo.js"></script>
+        <script src="piano-juego.js"></script>
+    </body>
 </html>
