@@ -57,7 +57,7 @@ Musingo es un juego interactivo diseñado para niños de 14 años en adelante qu
 | b     | A (La) |
 | n     | B (Si) |
 
-> [!IMPORTANT]  
+> [!IMPORTANTE]  
 > Otras letras del teclado del computador no están consideradas por lo que se recomienda no añadir canciones con estas letras.
 
 ## 📋 Requisitos 
@@ -95,7 +95,7 @@ zip -r ProyectoEva.zip ProyectoEva/*
 ```
 4. Sube el ProyectoEva.zip como un scorm a tu curso.
 
-> [!NOTE]
+> [!NOTA]
 > Puedes seguir el tutorial de como subir a la plataforma moodle que esta en Manual de Usuario.pdf.
 
 > [!CAUTION]
