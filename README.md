@@ -19,44 +19,44 @@ Musingo es un juego interactivo diseñado para niños de 14 años en adelante qu
         z x c v b n 
 * Que representan las siguientes notas musicales:
 
-    1 = C (Do)
-    2 = D (Re)
-    3 = E (Mi)
-    4 = F (Fa)
-    5 = G (Sol)
-    6 = A (La)
-    7 = B (Si)
-    8 = C (Do)
-    9 = D (Re)
-    0 = E (Mi)
+| Letra | Nota   |
+| :---- | :----- |
+| 1     | C (Do) |
+| 2     | D (Re) |
+| 3     | E (Mi) |
+| 4     | F (Fa) |
+| 5     | G (Sol)|
+| 6     | A (La) |
+| 7     | B (Si) |
+| 8     | C (Do) |
+| 9     | D (Re) |
+| 0     | E (Mi) |
+| q     | F (Fa) |
+| w     | G (Sol)|
+| e     | A (La) |
+| r     | B (Si) |
+| t     | C (Do) |
+| y     | D (Re) |
+| u     | E (Mi) |
+| i     | F (Fa) |
+| o     | G (Sol)|
+| p     | A (La) |
+| a     | B (Si) |
+| s     | C (Do) |
+| d     | D (Re) |
+| f     | E (Mi) |
+| g     | F (Fa) |
+| h     | G (Sol)|
+| j     | A (La) |
+| k     | B (Si) |
+| l     | C (Do) |
+| z     | D (Re) |
+| x     | E (Mi) |
+| c     | F (Fa) |
+| v     | G (Sol)|
+| b     | A (La) |
+| n     | B (Si) |
 
-    q = F (Fa)
-    w = G (Sol)
-    e = A (La)
-    r = B (Si)
-    t = C (Do)
-    y = D (Re)
-    u = E (Mi)
-    i = F (Fa)
-    o = G (Sol)
-    p = A (La)
-
-    a = B (Si)
-    s = C (Do)
-    d  = D (Re)
-    f = E (Mi)
-    g = F (Fa)
-    h = G (Sol)
-    j = A (La)
-    k = B (Si)
-    l = C (Do)
-
-    z = D (Re)
-    x = E (Mi)
-    c = F (Fa)
-    v = G (Sol)
-    b = A (La)
-    n = B (Si)
 
 Otras letras del teclado del computador no están consideradas por lo que se recomienda no añadir canciones con estas letras.
 ## 📋 Requisitos 
