@@ -16,7 +16,7 @@
       <file href="piano-juego.css" />
       <file href="piano-juego.js" />
       <file href="piano-solo.js" />
-      <file href="imagen/encab6.jpg" />
+      <file href="encab6.jpg" />
       <file href="samples/A1.mp3" />
       <file href="samples/A2.mp3" />
       <file href="samples/A3.mp3" />
@@ -87,7 +87,8 @@
       <file href="samples/Gs3.mp3" />
       <file href="samples/Gs4.mp3" />
       <file href="samples/Gs5.mp3" />
+      <file href="quarterNote.png" />
+      <file href="quarterNoteExtra.png" />
     </resource>
   </resources>
 </manifest>
-

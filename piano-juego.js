@@ -178,7 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 imgElement.style.width = "50px";
                 imgElement.style.height = "50px";
                 imgElement.style.position = "absolute";
-
                 if (subconjunto[i] === "s") {
                     imgElement.src = "quarterNoteExtra.png";
                     imgElement.style.left = "110px";
