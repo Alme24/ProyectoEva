@@ -57,7 +57,8 @@ Musingo es un juego interactivo diseñado para niños de 14 años en adelante qu
     v = G (Sol)
     b = A (La)
     n = B (Si)
- Otras letras del teclado del computador no están consideradas por lo que se recomienda no añadir canciones con estas letras.
+
+Otras letras del teclado del computador no están consideradas por lo que se recomienda no añadir canciones con estas letras.
 ## 📋 Requisitos 
 ### 🌐 Navegador web compatibles 
 ![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white)
