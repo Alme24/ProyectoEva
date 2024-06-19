@@ -2,6 +2,9 @@
 
 Musingo es un juego interactivo diseñado para niños de 14 años en adelante que desean aprender a tocar el piano de manera divertida y efectiva. Este material de e-learning está extendido con SCORM, lo que permite su integración en plataformas educativas como Moodle.
 
+> [!IMPORTANT]  
+>Este proyecto está basado en la primera versión de un piano virtual web que se puede encontrar en el siguiente enlace [ProyectoPianoWeb](https://github.com/Alme24/ProyectoPianoWeb.git)
+
 ## 📝 Características
 * Piano Digital 🎹 Musingo incluye un piano digital que permite a los usuarios   practicar tocando canciones.
 * Carga de Canciones 🎶 Los usuarios pueden agregar sus propias canciones para practicar, ofreciendo una experiencia personalizada y adaptativa.
